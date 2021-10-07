@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from "@mui/material";
 import theme from "../data/ui/themes/theme";
 import Head from "next/head";
+import Header from "../data/ui/components/surfaces/Header/Header";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -22,6 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link href="/fonts/tw-icons/css/treinaweb-icons.css" rel="stylesheet" />
       </Head>
       <ThemeProvider theme={theme}>
+        <Header />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
